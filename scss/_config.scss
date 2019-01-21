@@ -31,3 +31,32 @@ $background-opacity: 0.8;
         
     }
 }
+
+// Media Query Mixins
+// Small Device
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content; 
+    }
+}
+
+// Medium Device
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content; 
+    }
+}
+
+// Large Device
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content; 
+    }
+}
+
+// Xtra Large Device
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content; 
+    }
+}
