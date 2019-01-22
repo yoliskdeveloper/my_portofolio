@@ -65,14 +65,21 @@
                 'bio'
                 'job1'
                 'job2'
-                'job3';
+                'job3'
+                'job4'
+                'job5'
+                'job6';
 
             grid-template-columns: 1fr;
         }
 
         .projects {
-            grid-template-columns: repeat(2, 1fr);
+            //grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
         }
+
+         
+       
 
 
 }
@@ -83,11 +90,48 @@
         margin-top: 10vh;
     }
 
+    main#about h1 {
+        font-size: 3rem;
+    }
+
     main#work h1 {
+        font-size: 3rem;
+    }
+
+    main#contact h1 {
         font-size: 3rem;
     }
 
     .projects {
         grid-template-columns: 1fr;
-    } 
+    }
+
+    .boxes {
+        display: flex;
+        //flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: initial;
+        margin-top: 0.2rem;
+        
+    
+        div {
+            font-size: 0.9rem;
+            border: 1px solid rgb(189, 186, 186);
+            padding: 1.5rem 3rem;
+            margin-bottom: 0.5rem;
+            @include easeOut;
+    
+            &:hover {
+                padding: 1.3rem 2.3rem;
+                background: $secondary-color;
+                color: set-text-color($secondary-color);
+                span {
+                    color: set-text-color($primary-color);
+                }
+            }
+        }
+    }
+    
+   
 }
