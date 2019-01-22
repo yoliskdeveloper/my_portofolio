@@ -33,6 +33,15 @@ $background-opacity: 0.8;
     }
 }
 
+// set text color dynamically
+@function set-text-color($color) {
+    @if (lightness($color) > 60) {
+        @return #000;        
+    } @else {
+        @return #fff;
+    }
+}
+
 // Media Query Mixins
 // Small Device
 @mixin mediaSm {

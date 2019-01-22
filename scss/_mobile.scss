@@ -52,6 +52,18 @@
             transform: translate3d(-800px, 0, 0);
             //@include easeOut;
         }
+
+        .about-info {
+            grid-template-areas: 
+                'bioimage'
+                'bio'
+                'job1'
+                'job2'
+                'job3';
+
+            grid-template-columns: 1fr;
+        }
+
 }
 
 // Smartphones
