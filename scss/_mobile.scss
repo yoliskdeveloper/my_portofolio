@@ -60,17 +60,26 @@
         }
 
         .about-info {
+            grid-template-columns: repeat(1, 1fr);
             grid-template-areas: 
                 'bioimage'
                 'bio'
+                'work'
                 'job1'
                 'job2'
                 'job3'
                 'job4'
                 'job5'
-                'job6';
+                'job6'
+                'skill'
+                'skill1'
+                'skill2'
+                'skill3';
+                padding:0, 2.5rem;
 
-            grid-template-columns: 1fr;
+                .skill{
+                    line-height: 1rem;
+                }
         }
 
         .projects {
@@ -78,11 +87,31 @@
             grid-template-columns: repeat(1, 1fr);
         }
 
-         
-       
+         // Modal
+        .modal-content {
+            position: fixed;
+            margin: 50% 10%;
+            width: 100%;
+        }
 
+        #caption {
+            margin-top: 88%; 
+            display: block;
+            width: 80%;
+            text-align: center;
+        }
 
-}
+        .closeModal {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            color: #f1f1f1;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+          }
+  } 
+
 
 // Smartphones
 @include mediaSm {
@@ -132,6 +161,18 @@
             }
         }
     }
+
+    .closeModal {
+        position: absolute;
+        top: 23%;
+        right: 10%;
+    }
     
+
    
 }
+
+ /* 100% Image Width on Smaller Screens 
+ @media only screen and (max-width: 700px){
+    
+  } */
